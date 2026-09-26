@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2021  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -22,9 +22,9 @@ https://fpgasoftware.intel.com/eula.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 96 168 264 184)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "A[3..0]" (rect 5 0 38 12)(font "Arial" ))
+	(rect 72 192 240 208)
+	(text "INPUT" (rect 125 0 161 13)(font "Arial" (font_size 6)))
+	(text "B[3..0]" (rect 5 0 46 15)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -34,13 +34,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 4)(pt 113 8))
 		(line (pt 109 12)(pt 113 8))
 	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 128 7 152 20)(font "Arial" (font_size 6)))
 )
 (pin
 	(input)
-	(rect 64 192 232 208)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "B[3..0]" (rect 5 0 38 12)(font "Arial" ))
+	(rect 72 168 240 184)
+	(text "INPUT" (rect 125 0 161 13)(font "Arial" (font_size 6)))
+	(text "A[4..0]" (rect 5 0 44 15)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -50,13 +50,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 4)(pt 113 8))
 		(line (pt 109 12)(pt 113 8))
 	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 128 7 152 20)(font "Arial" (font_size 6)))
 )
 (pin
 	(output)
 	(rect 688 168 864 184)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "S0" (rect 90 0 102 12)(font "Arial" ))
+	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
+	(text "S0" (rect 90 0 107 15)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -71,8 +71,8 @@ https://fpgasoftware.intel.com/eula.
 (pin
 	(output)
 	(rect 688 184 864 200)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "S1" (rect 90 0 101 17)(font "Intel Clear" ))
+	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
+	(text "S1" (rect 90 0 106 19)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -87,8 +87,8 @@ https://fpgasoftware.intel.com/eula.
 (pin
 	(output)
 	(rect 688 200 864 216)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "S2" (rect 90 0 101 17)(font "Intel Clear" ))
+	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
+	(text "S2" (rect 90 0 106 19)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -103,8 +103,8 @@ https://fpgasoftware.intel.com/eula.
 (pin
 	(output)
 	(rect 688 216 864 232)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "S3" (rect 90 0 101 17)(font "Intel Clear" ))
+	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
+	(text "S3" (rect 90 0 106 19)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -119,8 +119,8 @@ https://fpgasoftware.intel.com/eula.
 (pin
 	(output)
 	(rect 688 232 864 248)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "C" (rect 90 0 98 12)(font "Arial" ))
+	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
+	(text "C" (rect 90 0 100 15)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -133,124 +133,131 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 504 144 640 272)
-	(text "somador4bits" (rect 5 0 87 19)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 105 24 122)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "A[3..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
-		(text "A[3..0]" (rect 21 27 59 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "B[3..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
-		(text "B[3..0]" (rect 21 43 59 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 136 32)
-		(output)
-		(text "S0" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "S0" (rect 97 27 113 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 136 32)(pt 120 32))
-	)
-	(port
-		(pt 136 48)
-		(output)
-		(text "S1" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "S1" (rect 97 43 113 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 136 48)(pt 120 48))
-	)
-	(port
-		(pt 136 64)
-		(output)
-		(text "S2" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "S2" (rect 97 59 113 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 136 64)(pt 120 64))
-	)
-	(port
-		(pt 136 80)
-		(output)
-		(text "S3" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "S3" (rect 97 75 113 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 136 80)(pt 120 80))
-	)
-	(port
-		(pt 136 96)
-		(output)
-		(text "Cout" (rect 0 0 27 19)(font "Intel Clear" (font_size 8)))
-		(text "Cout" (rect 81 91 108 110)(font "Intel Clear" (font_size 8)))
-		(line (pt 136 96)(pt 120 96))
-	)
-	(drawing
-		(rectangle (rect 16 16 120 112))
-	)
-)
-(symbol
 	(rect 312 272 408 400)
-	(text "complementa2" (rect 5 0 94 19)(font "Intel Clear" (font_size 8)))
-	(text "inst2" (rect 8 107 30 124)(font "Intel Clear" ))
+	(text "complementa2" (rect 5 0 111 20)(font "Intel Clear" (font_size 8)))
+	(text "inst2" (rect 8 107 39 126)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "D[0]" (rect 0 0 27 19)(font "Intel Clear" (font_size 8)))
-		(text "D[0]" (rect 21 27 48 46)(font "Intel Clear" (font_size 8)))
+		(text "D[0]" (rect 0 0 29 20)(font "Intel Clear" (font_size 8)))
+		(text "D[0]" (rect 21 27 50 47)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 32)(pt 16 32))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "D[1]" (rect 0 0 27 19)(font "Intel Clear" (font_size 8)))
-		(text "D[1]" (rect 21 43 48 62)(font "Intel Clear" (font_size 8)))
+		(text "D[1]" (rect 0 0 29 20)(font "Intel Clear" (font_size 8)))
+		(text "D[1]" (rect 21 43 50 63)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "D[2]" (rect 0 0 27 19)(font "Intel Clear" (font_size 8)))
-		(text "D[2]" (rect 21 59 48 78)(font "Intel Clear" (font_size 8)))
+		(text "D[2]" (rect 0 0 29 20)(font "Intel Clear" (font_size 8)))
+		(text "D[2]" (rect 21 59 50 79)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 64)(pt 16 64))
 	)
 	(port
 		(pt 0 80)
 		(input)
-		(text "D[3]" (rect 0 0 27 19)(font "Intel Clear" (font_size 8)))
-		(text "D[3]" (rect 21 75 48 94)(font "Intel Clear" (font_size 8)))
+		(text "D[3]" (rect 0 0 29 20)(font "Intel Clear" (font_size 8)))
+		(text "D[3]" (rect 21 75 50 95)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
 		(pt 96 32)
 		(output)
-		(text "Y1" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "Y1" (rect 59 27 75 46)(font "Intel Clear" (font_size 8)))
+		(text "Y1" (rect 0 0 18 20)(font "Intel Clear" (font_size 8)))
+		(text "Y1" (rect 59 27 77 47)(font "Intel Clear" (font_size 8)))
 		(line (pt 96 32)(pt 80 32))
 	)
 	(port
 		(pt 96 48)
 		(output)
-		(text "Y2" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "Y2" (rect 59 43 75 62)(font "Intel Clear" (font_size 8)))
+		(text "Y2" (rect 0 0 18 20)(font "Intel Clear" (font_size 8)))
+		(text "Y2" (rect 59 43 77 63)(font "Intel Clear" (font_size 8)))
 		(line (pt 96 48)(pt 80 48))
 	)
 	(port
 		(pt 96 64)
 		(output)
-		(text "Y3" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "Y3" (rect 59 59 75 78)(font "Intel Clear" (font_size 8)))
+		(text "Y3" (rect 0 0 18 20)(font "Intel Clear" (font_size 8)))
+		(text "Y3" (rect 59 59 77 79)(font "Intel Clear" (font_size 8)))
 		(line (pt 96 64)(pt 80 64))
 	)
 	(port
 		(pt 96 80)
 		(output)
-		(text "Y4" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "Y4" (rect 59 75 75 94)(font "Intel Clear" (font_size 8)))
+		(text "Y4" (rect 0 0 18 20)(font "Intel Clear" (font_size 8)))
+		(text "Y4" (rect 59 75 77 95)(font "Intel Clear" (font_size 8)))
 		(line (pt 96 80)(pt 80 80))
 	)
 	(drawing
 		(rectangle (rect 16 16 80 112))
+	)
+)
+(symbol
+	(rect 504 144 640 304)
+	(text "somador4bits" (rect 5 0 102 20)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 137 31 156)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "A[4..0]" (rect 0 0 44 20)(font "Intel Clear" (font_size 8)))
+		(text "A[4..0]" (rect 21 27 65 47)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "B[4..0]" (rect 0 0 44 20)(font "Intel Clear" (font_size 8)))
+		(text "B[4..0]" (rect 21 43 65 63)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "S4" (rect 0 0 18 20)(font "Intel Clear" (font_size 8)))
+		(text "S4" (rect 97 27 115 47)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 32)(pt 120 32))
+	)
+	(port
+		(pt 136 48)
+		(output)
+		(text "S3" (rect 0 0 18 20)(font "Intel Clear" (font_size 8)))
+		(text "S3" (rect 97 43 115 63)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 48)(pt 120 48))
+	)
+	(port
+		(pt 136 64)
+		(output)
+		(text "S0" (rect 0 0 18 20)(font "Intel Clear" (font_size 8)))
+		(text "S0" (rect 97 59 115 79)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 64)(pt 120 64))
+	)
+	(port
+		(pt 136 80)
+		(output)
+		(text "S1" (rect 0 0 18 20)(font "Intel Clear" (font_size 8)))
+		(text "S1" (rect 97 75 115 95)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 80)(pt 120 80))
+	)
+	(port
+		(pt 136 96)
+		(output)
+		(text "S2" (rect 0 0 18 20)(font "Intel Clear" (font_size 8)))
+		(text "S2" (rect 97 91 115 111)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 96)(pt 120 96))
+	)
+	(port
+		(pt 136 112)
+		(output)
+		(text "Cout" (rect 0 0 34 20)(font "Intel Clear" (font_size 8)))
+		(text "Cout" (rect 81 107 115 127)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 112)(pt 120 112))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 144))
 	)
 )
 (connector
@@ -276,16 +283,11 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 264 176)
-	(pt 504 176)
-	(bus)
-)
-(connector
 	(pt 408 304)
 	(pt 416 304)
 )
 (connector
-	(text "B_neg[3..0]" (rect 402 168 456 185)(font "Intel Clear" ))
+	(text "B_neg[3..0]" (rect 402 168 473 187)(font "Intel Clear" ))
 	(pt 416 192)
 	(pt 392 192)
 	(bus)
@@ -323,37 +325,37 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "B_neg[3]" (rect 440 294 457 337)(font "Intel Clear" )(vertical))
+	(text "B_neg[3]" (rect 440 294 459 350)(font "Intel Clear" )(vertical))
 	(pt 464 352)
 	(pt 464 192)
 )
 (connector
-	(text "B_neg[2]" (rect 424 278 441 321)(font "Intel Clear" )(vertical))
+	(text "B_neg[2]" (rect 424 278 443 334)(font "Intel Clear" )(vertical))
 	(pt 448 336)
 	(pt 448 192)
 )
 (connector
-	(text "B_neg[1]" (rect 407 261 424 304)(font "Intel Clear" )(vertical))
+	(text "B_neg[1]" (rect 407 261 426 317)(font "Intel Clear" )(vertical))
 	(pt 432 320)
 	(pt 432 192)
 )
 (connector
-	(text "B_neg[0]" (rect 392 246 409 289)(font "Intel Clear" )(vertical))
+	(text "B_neg[0]" (rect 392 246 411 302)(font "Intel Clear" )(vertical))
 	(pt 416 304)
 	(pt 416 192)
 )
 (connector
-	(text "B[0]" (rect 264 272 281 292)(font "Intel Clear" )(vertical))
+	(text "B[0]" (rect 264 272 283 297)(font "Intel Clear" )(vertical))
 	(pt 288 200)
 	(pt 288 304)
 )
 (connector
-	(text "B[1]" (rect 256 288 273 308)(font "Intel Clear" )(vertical))
+	(text "B[1]" (rect 256 288 275 313)(font "Intel Clear" )(vertical))
 	(pt 280 200)
 	(pt 280 320)
 )
 (connector
-	(text "B[2]" (rect 248 304 265 324)(font "Intel Clear" )(vertical))
+	(text "B[2]" (rect 248 304 267 329)(font "Intel Clear" )(vertical))
 	(pt 272 200)
 	(pt 272 336)
 )
@@ -383,11 +385,7 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 256 352)
-	(pt 312 352)
-)
-(connector
-	(pt 232 200)
+	(pt 240 200)
 	(pt 256 200)
 	(bus)
 )
@@ -397,9 +395,18 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "B[3]" (rect 240 319 257 339)(font "Intel Clear" )(vertical))
+	(text "B[3]" (rect 232 320 251 345)(font "Intel Clear" )(vertical))
 	(pt 256 200)
 	(pt 256 352)
+)
+(connector
+	(pt 256 352)
+	(pt 312 352)
+)
+(connector
+	(pt 240 176)
+	(pt 504 176)
+	(bus)
 )
 (junction (pt 272 200))
 (junction (pt 288 200))

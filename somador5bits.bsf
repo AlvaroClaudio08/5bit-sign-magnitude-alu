@@ -22,7 +22,7 @@ https://fpgasoftware.intel.com/eula.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 16 16 152 176)
-	(text "somador4bits" (rect 5 0 102 20)(font "Intel Clear" (font_size 8)))
+	(text "somador5bits" (rect 5 0 102 20)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 137 31 156)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
