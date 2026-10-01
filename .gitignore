@@ -1,0 +1,18 @@
+# Banco de dados e compilação do Quartus
+/db/
+/incremental_db/
+/simulation/
+/greybox/
+/hc_output/
+
+# Arquivos de relatórios e saídas temporárias
+*.rpt
+*.summary
+*.done
+*.jdi
+*.pin
+*.sld
+*.sof
+*.pof
+*.qws
+*.bak
